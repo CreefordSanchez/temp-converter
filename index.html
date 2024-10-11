@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr ">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Duan Wang">
+    <meta name="description" content="My web project">
+    <meta name="keyword" content="html, css, web, seo, web development">
+    <title>duan</title>
+    <link rel="icon" href="./asserts/img/#" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/mrspecht/cdn/reset.css" media="all">
+    <link rel="stylesheet" href="./asserts/css/style.css" media="all">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" >
+    <script src="./asserts/js/index.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <div class="container flex space">
+        <h1>CONVERTER</h1>
+        <div class="nav-bar flex">
+          <a href="#">Projects</a>
+          <a href="#">About me</a>
+          <a href="#">Contact</a>    
+        </div>
+      </div>
+    </header>
+
+    <main class="container">
+      <h2>Temperature converter</h2>
+       <div class="temperature-converter">
+      <form id="converter-form">
+        <label for="temperature">Temperature converter</label>
+
+        <!-- Input field and Convert button in the same line -->
+        <div class="input-and-button">
+          <input type="text" class="temperature" placeholder="Enter value" required>
+          <button class="convert-btn">Convert</button>
+        </div>
+
+        <!-- Radio buttons section -->
+        <div class="radio-group">
+          <label>
+            <input type="radio" id="toFahrenheit" name="conversion" checked>
+            To Fahrenheit
+          </label>
+          <label>
+            <input type="radio" id="toCelsius" name="conversion">
+            To Celsius
+          </label>
+        </div>
+      </form>
+
+      <div class="result">
+          <p class="output"></p>
+      </div>
+    </div>
+
+    <button id="themeSwitcher">Dark mode</button>
+    </main>
+  </body>
+</html>

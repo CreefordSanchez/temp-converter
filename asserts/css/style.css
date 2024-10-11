@@ -1,0 +1,174 @@
+@charset "utf-8";
+:root {
+    --app-dark-background: #181721;
+    --app-light-background: #efedf5;
+    --app-header-background: #6b4de3;
+}
+  
+body {
+    background-color: var(--app-light-background);
+    transition: all 0.25s ease-in-out;
+}
+
+/*--------------------------------------------*/
+/*Utility classes                             */
+/*--------------------------------------------*/
+
+.container {
+width: min(100% - 30px, 1200px);
+margin-inline: auto;
+}
+
+.flex {
+display: flex;
+}
+
+.space {
+    justify-content: space-between;
+}
+
+/*--------------------------------------------*/
+/*Header                                      */
+/*--------------------------------------------*/
+
+header {
+    height: 72px;
+    align-items: center;
+    line-height: 72px;
+    color:#fff;
+    background-color: var(--app-header-background);
+
+    h1 {
+        font-size: 25px;
+    }
+    
+    a {
+        color: #fff;
+        text-decoration-line: none;
+        font-size: 20px;
+        padding: 0 20px;
+    }
+}
+
+/*--------------------------------------------*/
+/*Main                                        */
+/*--------------------------------------------*/
+
+.temperature-converter {
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+  width: 100%;
+  text-align: left;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  margin-left: 10px;
+  margin-top: 0px;
+  padding-top: 10px;
+}
+
+
+.input-and-button {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+input[type="text"] {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #444;
+  border-radius: 5px;
+  
+  flex-grow: 1;
+}
+
+.convert-btn {
+  padding: 10px 20px;
+  background-color: #6a4bcf;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-left: 10px;
+}
+
+.convert-btn:hover {
+  background-color: #5436b5;
+}
+
+.radio-group {
+  display: flex;
+  justify-content:left;
+  margin-bottom: 0px;
+  margin-right: 0px;
+}
+
+input[type="radio"] {
+  margin-top: 0;
+  margin-right: 5px;
+}
+
+.result {
+  background-color: #c4c4ca;
+  height: 40px;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 18px;
+  margin-top: 30px;
+  text-align: center;
+}
+
+button#themeSwitcher {
+  background-color: #333;
+  color: white;
+  border: none;
+  cursor: pointer;
+  position: fixed;
+  bottom: 20px;  
+  right: 20px;  
+  z-index: 1000;
+  width: 100px;
+  border-radius: 20px;
+}
+
+/* Dark Mode */
+body.dark-mode {
+  background-color: #333;
+  color: #fff;
+  #themeSwitcher {
+    background-color: var(--app-light-background);
+    color: var(--app-dark-background);
+  }
+}
+
+button#themeSwitcher.dark {
+  background-color: var(--app-dark-background);
+  color: white;
+}
+
+#result {
+  margin-top: 20px;
+  padding: 10px;
+ 
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+#themeSwitcher {
+    position: fixed;
+    inset: auto 40px 40px auto;
+    width: 160px;
+    height: 40px;
+    border-radius: 30px;
+    background-color: var(--app-dark-background);
+    font-size: 16px;
+    color:#fff;
+}
