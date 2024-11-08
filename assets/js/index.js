@@ -31,6 +31,7 @@ toFeh.addEventListener('click', function()  {
 });
 
 convertBtn.addEventListener('click', function(event) {
+  //prevent the form from refreshing
   event.preventDefault();
   if(validat()) {
     if(convertTo) {
